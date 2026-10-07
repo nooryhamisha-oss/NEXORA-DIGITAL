@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, Manrope, ui-sans-serif, system-ui, sans-serif;
+  color: #0b0f19;
+  background: #faf7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #faf7f2;
+}
+* {
+  box-sizing: border-box;
+}
+::selection {
+  background: #c8955a;
+  color: #0b0f19;
+}
+.container-x {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.section-pad {
+  padding: 110px 0;
+}
+@media (max-width: 768px) {
+  .section-pad {
+    padding: 76px 0;
+  }
+  .container-x {
+    width: min(100% - 28px, 1180px);
+  }
+}
+.reveal {
+  animation: rise 0.7s ease both;
+}
+.delay-1 {
+  animation-delay: 0.08s;
+}
+.delay-2 {
+  animation-delay: 0.16s;
+}
+.delay-3 {
+  animation-delay: 0.24s;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(27, 58, 107, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 58, 107, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+section[id] {
+  scroll-margin-top: 74px;
+}
